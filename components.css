@@ -1,0 +1,102 @@
+
+/* REVIEWS SECTION */
+/* THIS WILL SELECT THE LAST TWO CHILD ITEMS OF THE LIST */
+
+.reviews-flow > * + * {
+  margin-top: var(--flow-review);
+}
+
+.reviews-wrap {
+  grid-column: 2 / 3;
+  color: var(--clr-dark-magenta); 
+  font-weight: 800;
+}
+.review {
+  background-color: var(--clr-light-grayish);
+  border-radius: .25rem;
+  padding: .75rem 2rem;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review::before {
+  content: '';
+  width: 30%;
+  height: 1rem;
+  margin: 0 auto;
+  display: block;
+  background-image: url(../images/icon-star.svg);
+  margin-bottom: .5rem;
+  background-repeat: space;
+}
+
+/* CARD STYLES */
+section {
+  background-color: var(--clr-dark-magenta);
+  border-radius: var(--border-radius);
+  color: var(--clr-light-grayish);
+  text-align: left;
+  padding: 1.85rem;
+  margin: 0 auto;
+  max-width: 35rem;
+}
+
+.customer-container {
+  display: flex;
+  align-items: center;
+}
+
+section img {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: var(--spacing);
+}
+
+.customer-name {
+  font-weight: 800;
+}
+
+.status {
+  color: var(--clr-soft-pink);
+}
+
+blockquote {
+  margin-top: var(--spacing);
+}
+
+@media(min-width: 50em) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-size: 45%, 35%;
+  }
+
+  .review {
+    display: flex;
+    align-content: center;
+    padding: 1rem 2rem;
+  }
+
+  .review::before {
+    margin: 0 1rem 0 0;
+  }
+
+  .review:first-of-type {
+    transform: translateX(-2rem);
+  }
+
+  .review:last-of-type {
+    transform: translateX(2rem);
+  }
+
+  .card-2 {
+    transform: translateY(2.25rem);
+  }
+
+  .card-3 {
+    transform: translateY(4.25rem);
+  }
+}
